@@ -191,10 +191,3 @@ button {
     }
 }
 
-@media screen and ( min-width: 800px) {
-
-    button {
-        background-color:rebeccapurple;
-    }
-    
-}
