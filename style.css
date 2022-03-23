@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+body {
+    min-width: 340px;
+    max-width: 600px;
+    margin: auto;
+    background: linear-gradient(to left, #37433a, #a17fe0, #37433a);
+    background-repeat: no-repeat;
+}
+
+
 .invoice-container {
     display: flex;
     flex-direction: column;
@@ -12,6 +21,7 @@
     width: 100%;
     border: 1px solid blue;
     height: 100vh;
+    border: none;
 }
 
 .header-column {
@@ -26,7 +36,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: radial-gradient(circle, #082c63, #00307c, #003396, #0034ae, #1933c6);    
+    background-image: radial-gradient(circle, #10438f, #0e4bad, #0e41a8, #0544d8, #1334ee);    
     color: rgba(245, 245, 245, 0.898);
     text-shadow: 1px 3px 15px rgb(194, 46, 46);
 
@@ -44,7 +54,7 @@
     flex-direction: column;
     background-color: rgb(14, 6, 36);
     color: rgb(184, 184, 181);
-    padding: 10px;
+    padding: 12px 20px;
 }
 
 .row-invoice {
@@ -52,77 +62,67 @@
     flex-direction: row;
 }
 
-.row-invoice-one {
-    height: 25%;
-    margin-top: 20px;
-}
-.wrap-column {
+
+.apartments-facilities {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    height: 30%;
 }
 
-.wrap-column button {
-    width: 31%;
+.apartments-facilities button {
+    height: 25%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 1%;
+    margin: 0px 5px;
+    padding: 20px 5px;
     border: none;
     border-radius: 5px;
-    font-size: 10px;
+    font-size:11px;
     font-weight: bold;
     background-color: rgb(132, 137, 172);
     color: rgb(41, 39, 48);
 }
 
-
-
-.row-invoice-two {
-    min-height: 20%;
-    max-height: 40%;
-    margin-top: 40px;
+.apartments-facilities button:hover {
+    background: linear-gradient(to left, #4e54c8, #8f94fb);
 }
 
 hr {
-    margin-top: 40px;
+    margin-top: 50px;
 }
-
-
 
 .row-invoice-three {
     height: 25%;
     margin-top: 10px;
 }
 
-
-
-.tasks-section, .invoice-section {
+.facilities-added, .invoice-notice-section {
     width: 75%;    
 }
-.tasks-section p, .invoice-section p{
+.facilities-added p, .invoice-notice-section p{
     text-align: start;
 }
-.tasks-section h3, .invoice-section h3 {
+.facilities-added h3, .invoice-notice-section h3 {
     text-align: start;
     font-size: 18px;
     margin-bottom: 5px;
 }
 
-
-.tasks-cost-section, .invoice-cost-section {
+.facilities-cost-section, .invoice-total-cost {
     width: 25%;
 }
-.tasks-cost-section p, .invoice-cost-section p  {
+.facilities-cost-section p, .invoice-total-cost p  {
     text-align: end;
 }
-.tasks-cost-section h3, .invoice-cost-section h3 {
+.facilities-cost-section h3, .invoice-total-cost h3 {
     text-align: end;
     font-size: 18px;
     margin-bottom: 5px;
 }
-
 
 #btn-send-invoice {
     background-image: radial-gradient(circle, #082c63, #00307c, #003396, #0034ae, #1933c6);    
@@ -132,13 +132,69 @@ hr {
     padding: 4px;
     border: none;
     border-radius: 10px;
-    width: 80%;
+    width: 60%;
     margin: auto;
     justify-content: center;
+    margin-bottom: 20px;
+}
+#btn-send-invoice:hover {
+    background: linear-gradient(to left, #4e54c8, #21278f);
 }
 
 button {
     cursor: pointer;
 }
 
+.row-invoice p {
+    margin-top: 3px;
+}
 
+
+
+
+
+
+
+
+@media screen and ( min-width: 600px ) {
+
+    .column-invoice-one {
+        font-size: 35px;
+    }
+
+    .column-invoice-two {
+        padding: 15px 60px;
+    }
+
+
+    .apartments-facilities {
+        height: 30%;
+    }
+
+    .apartments-facilities button {
+        font-size: 12px;
+    }
+
+    .row-invoice p, .row-invoice h3 {
+        padding: 0px 10px;
+        margin-top: 2px;
+    }
+    
+    #btn-send-invoice {
+        width: 40%;
+        margin-bottom: 20px;
+    }
+
+    hr {
+        margin-top: 20px;
+        border-bottom: none;
+    }
+}
+
+@media screen and ( min-width: 800px) {
+
+    button {
+        background-color:rebeccapurple;
+    }
+    
+}
